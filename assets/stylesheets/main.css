@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #483D8B;
+}
+.navbar {
+  top: 30px;
+  width: 60%;
+  margin: auto;
+}
+
+.navbar a {
+  color: lightgray;
+}
+.solde-main {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/logo_amarelo.png");
+  background-color: #483D8B;
+  background-repeat: no-repeat;
+  background-attach: fixed;
+  background-position: right bottom;
+  background-size: 60% 40%;
+
+
+  -webkit-animation-name: background-slide-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes background-slide-in {
+  from {
+    background-position: 50%  bottom;
+    opacity: 0;
+  }
+  to {
+    background-position: right bottom;
+    opacity: 1;
+  }
+}
