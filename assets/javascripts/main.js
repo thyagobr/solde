@@ -1,4 +1,4 @@
-angular.module("solde", ['ui.router'])
+angular.module("solde", ['ui.router', 'ngAnimate'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('quemsomos', {
