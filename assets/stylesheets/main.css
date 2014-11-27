@@ -4,7 +4,7 @@ body {
 }
 .navbar {
   width: 60%;
-  margin: 6em auto;
+  margin: 4em auto;
 }
 
 .navbar a {
@@ -26,8 +26,7 @@ body {
 }
 
 .panel, .panel-body {
-  background-color: transparent;
-  color: lightgray;
+  background-color: lightgray;
 }
 
 .panel-primary > .panel-heading {
@@ -40,7 +39,10 @@ body {
 }
 
 .panel {
-  min-height: 500px;
+  min-height: 10em;
+  -webkit-animation-name: background-slide-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes background-slide-in {
