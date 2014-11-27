@@ -16,7 +16,7 @@ body {
   background-image: url("../images/logo_amarelo.png");
   background-color: #483D8B;
   background-repeat: no-repeat;
-  background-attach: fixed;
+  background-attachment: fixed;
   background-position: right bottom;
   background-size: 60% 40%;
 
@@ -39,10 +39,25 @@ body {
 }
 
 .panel {
-  min-height: 10em;
+  min-height: 50%;
   -webkit-animation-name: background-slide-in;
   -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-in;
+}
+
+ul {
+  -webkit-animation-name: nav-slide-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+}
+
+ul > li > a {
+  transition: box-shadow 0.3s ease-in, padding 0.3 ease-in;
+}
+
+ul > li > a:hover {
+  box-shadow: 3px 3px 5px white, -3px 3px 5px white, 3px -3px 5px white, -3px -3px 5px white;
+  color: #000;
 }
 
 @-webkit-keyframes background-slide-in {
@@ -53,5 +68,14 @@ body {
   to {
     background-position: right bottom;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes nav-slide-in {
+  from {
+    top: -1900px;
+  }
+  to {
+    top: 0;
   }
 }
