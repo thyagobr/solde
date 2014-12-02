@@ -4,6 +4,10 @@ angular.module("solde", ['ui.router', 'ngAnimate'])
       .state('quemsomos', {
         url: '/quemsomos',
       templateUrl: "partials/about.html"
+      })
+      .state('quefazemos', {
+        url: '/quefazemos',
+      templateUrl: "partials/about.html"
       });
   })
   .controller('test', ["$scope", function ($scope) {

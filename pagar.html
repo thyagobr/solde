@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang"pt-BR">
+<head>
+<title>contas a pagar</title>
+<link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="/assets/javascripts/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="/assets/javascripts/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/javascripts/angular.js"></script>
+<script type="text/javascript" src="/assets/javascripts/angular-ui-router.js"></script>
+<script type="text/javascript" src="/assets/javascripts/payment.js"></script>
+</head>
+<body ng-app="payment">
+<div ng-controller="listController" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-11">
+      <form>
+        <div class="form-group">
+          <label for="fornecedor">Fornecedor</label>
+          <input ng-model="pay.fornecedor" type="text" id="forneccedor"></input>
+        </div>
+        <div class="form-group">
+          <label for="valor">Valor</label>
+          <input ng-model="pay.valor" type="text" id="valor" placeholder="1017,15"></input>
+        </div>
+        <div class="form-group">
+          <label for="vencimento">Vencimento</label>
+          <input ng-model="pay.vencimento" type="text" id="vencimento" placeholder="dia/mês/ano"></input>
+        </div>
+        <button ng-click="cadastrar()" type="submit" class="btn btn-primary">{{ 'cadastrar' }}</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div>
+        <ul>
+          <li ng-repeat="item in list">{{ item.fornecedor }} - {{item.valor}} -
+          {{item.vencimento}}</li>
+        </ul>
+      </div>
+    </div>
+</div>
+</body>
+</html>
