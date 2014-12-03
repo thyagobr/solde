@@ -18,7 +18,7 @@
       <form>
         <div class="form-group">
           <label for="fornecedor">Fornecedor</label>
-          <input ng-model="pay.fornecedor" type="text" id="forneccedor"></input>
+          <input ng-model="pay.fornecedor" type="text" id="fornecedor"></input>
         </div>
         <div class="form-group">
           <label for="valor">Valor</label>
@@ -40,6 +40,7 @@
           <li ng-repeat="item in list">{{ item.fornecedor }} - {{item.valor}} -
           {{item.vencimento}}</li>
         </ul>
+        <h2 ng-if="here">{{ data }}</h2>
       </div>
     </div>
 </div>
