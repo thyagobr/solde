@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang"pt-BR">
+<html lang="pt-BR">
 <head>
 <title>contas a pagar</title>
 <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
@@ -11,18 +11,35 @@
 <script type="text/javascript" src="/assets/javascripts/payment.js"></script>
 </head>
 <body ng-app="payment">
-<div ng-controller="listController" class="container-fluid">
+<div ng-controller="paymentsController" class="container-fluid">
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-11">
+      <h1>Lançamento de Contas</h1>
       <form>
         <div class="form-group">
-          <label for="fornecedor">Fornecedor</label>
+          <label for="date">Date de Emissão</label>
+          <input ng-model="pay.date" type="text" id="fornecedor"></input>
+        </div>
+        <div class="form-group">
+          <label for="company_id">ID do Fornecedor</label>
+          <input ng-model="pay.company_id" type="text" id="company_id"></input>
+          <label for="fornecedor">Razão Social</label>
           <input ng-model="pay.fornecedor" type="text" id="fornecedor"></input>
         </div>
         <div class="form-group">
-          <label for="valor">Valor</label>
+          <label for="carrier">Portador</label>
+          <input ng-model="pay.carrier" type="text" id="carrier"></input>
+        </div>
+        <div class="form-group">
+          <label for="reference">Referência</label>
+          <input ng-model="pay.reference" type="text" id="reference"></input>
+        </div>
+        <div class="form-group">
+          <label for="valor">Valor Total</label>
           <input ng-model="pay.valor" type="text" id="valor" placeholder="1017,15"></input>
+          <label for="number_of_payments">Número de Parcelas</label>
+          <select ng-model="pay.number_of_payments" ng-options="number for number in pay.list_number_of_payments" id="number_of_payments"></select>
         </div>
         <div class="form-group">
           <label for="vencimento">Vencimento</label>
